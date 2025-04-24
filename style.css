@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(to right, #fceabb, #f8b500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .game-container {
+    text-align: center;
+    width: 95%;
+    max-width: 600px;
+  }
+  
+  #game-area {
+    position: relative;
+    height: 400px;
+    background-color: #fff;
+    border: 2px dashed #aaa;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #aaf, #00f);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    animation: float 4s linear forwards;
+    cursor: pointer;
+  }
+  
+  @keyframes float {
+    from {
+      bottom: -60px;
+    }
+    to {
+      bottom: 100%;
+    }
+  }
+  
+  #instruction, #score, #level-display {
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e68900;
+  }
+  
+  .info-btn {
+    background: none;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #reward-screen {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #4caf50;
+    margin-top: 20px;
+  }
+  
