@@ -128,6 +128,12 @@ function endGame(completed) {
   const totalCorrect = score; // real correct bubbles popped
   const finalScoreOutOf10 = Math.round((score / (maxLevel * bubblesPerLevel)) * 10);
 
+  // Call Android.submitResult to pass the game results to the Android app
+  if (window.Android && Android.submitResult) {
+    Android.submitResult("Bubble Pop Game", finalScoreOutOf10, timeTaken);
+    console.log("Result submitted to Android:", finalScoreOutOf10, timeTaken);
+  }
+
   const message = document.createElement("div");
   message.id = "result-message";
 
